@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+    padding:30px;
+    border-radius:20px;
+    margin:auto;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 8px 32px rgba(0,0,0,0.15);
+}
+
+h1{
+    text-align:center;
+    color:rgb(4, 28, 65);
+    margin-bottom:25px;
+}
+
+.input-section{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+
+#city_input{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+    max-width:300px;}
+
+#Search-btn{
+    padding:14px 24px;
+    border:none;
+    border-radius:12px;
+    background:#d7192f;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+     white-space:nowrap;
+}
+
+#Search-btn:hover{
+    transform:translateY(-2px);
+}
+
+#current-location-btn{
+     padding:14px 24px;
+    border:none;
+    border-radius:12px;
+    background:#d7192f;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+     white-space:nowrap;
+}
+
+#current-location-btn:hover{
+    transform:translateY(-2px);
+}
+
+#loading,
+#error-message{
+    text-align:center;
+    margin-bottom:15px;
+    color:white;
+    font-weight:500;
+}
+
+#error-message{
+    color:#ffe0e0;
+}
+
+#weather-card{
+    text-align:center;
+    color :#FDFBD3;
+    padding:20px;
+}
+
+#city-name{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+#weather-icon{
+    font-size:60px;
+    margin:10px 0;
+}
+
+#temperature{
+    font-size:48px;
+    margin:10px 0;
+}
+
+#description{
+    font-size:18px;
+    text-transform:capitalize;
+    margin-bottom:20px;
+}
+
+.extra-info{
+    display:flex;
+    justify-content:space-around;
+    gap:20px;
+}
+
+.extra-info p{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+    border-radius:10px;
+    flex:1;
+}
+
+@media(max-width:600px){
+
+    .input-section{
+        display: flex;
+        flex-direction:row;
+    }
+    #city_input{
+        min-width:0;
+        max-width:none;
+    }
+
+    #Search-btn{
+        width:auto;
+    }
+    #current-location-btn{
+        width:auto;
+    }
+
+    .extra-info{
+        flex-direction:column;
+    }
+
+    #temperature{
+        font-size:36px;
+    }
+}
